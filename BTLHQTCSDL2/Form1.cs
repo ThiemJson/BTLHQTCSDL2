@@ -234,7 +234,6 @@ namespace BTLHQTCSDL2
                 string ngaydongtien = this.hoadon_time_ngaydongtien.Value.ToShortDateString().ToString();
 
                 this.query = $"INSERT INTO HOADON(soHD,maP,maNV,ngaydongtien,chisodiendau,chisodiencuoi,dongiadien,chisonuocdau,chisonuoccuoi,dongianuoc) VALUES(N'{mahoadon}',N'{maphong}',N'{manhanvien}',N'{ngaydongtien}',{Int32.Parse(chisodiendau)},{Int32.Parse(chisodiencuoi)},4,{Int32.Parse(chisonuocdau)},{Int32.Parse(chisonuocuoi)},25);";
-                MessageBox.Show(this.query, "Thongbao");
                 this.cmd = new SqlCommand(this.query, Config.Conn);
                 try
                 {
@@ -265,7 +264,7 @@ namespace BTLHQTCSDL2
             this.hoadon_txt_chisonuocdau.Text = row.Cells[7].Value.ToString();
             this.hoadon_txt_chisonuoccuoi.Text = row.Cells[8].Value.ToString();
 
-            this.hoadon_txt_tongtien.Text = row.Cells[10].Value.ToString() + "000 VNĐ";
+            this.hoadon_txt_tongtien.Text = row.Cells[10].Value.ToString() + ".000 VNĐ";
   
         }
         #endregion
@@ -309,7 +308,18 @@ namespace BTLHQTCSDL2
 
         private void hopdong_grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = hopdong_grid.Rows[e.RowIndex];
 
+            this.hopdong_txt_mahopdong.Text = row.Cells[0].Value.ToString();
+            this.hopdong_txt_maphong.Text = row.Cells[1].Value.ToString();
+            this.hopdong_txt_manhanvien.Text = row.Cells[2].Value.ToString();
+
+            this.hopdong_time_ngaybatdauthue.Text = row.Cells[3].Value.ToString();
+            this.hopdong_time_ngaybatdauthue.Text = row.Cells[4].Value.ToString();
+
+            this.hopdong_time_ngaylaphopdong.Text = row.Cells[6].Value.ToString();
+
+            this.hopdong_txt_tongtien.Text = row.Cells[7].Value.ToString() +".000 VNĐ";
         }
         #endregion
 
@@ -347,7 +357,14 @@ namespace BTLHQTCSDL2
         }
         private void khunha_grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = khunha_grid.Rows[e.RowIndex];
 
+            this.khunha_txt_makhunha.Text = row.Cells[0].Value.ToString();
+            this.khunha_txt_tenkhunha.Text = row.Cells[1].Value.ToString();
+
+            this.khunha_txt_mota.Text = row.Cells[4].Value.ToString();
+            this.khunha_txt_soluongsv.Text = row.Cells[2].Value.ToString(); 
+            this.khunha_txt_sophong.Text = row.Cells[3].Value.ToString(); 
         }
         #endregion
 
@@ -392,7 +409,18 @@ namespace BTLHQTCSDL2
 
         private void nhanvien_grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = nhanvien_grid.Rows[e.RowIndex];
 
+            this.nhanvien_txt_manhanvien.Text = row.Cells[0].Value.ToString();
+            this.nhanvien_txt_tennhanvien.Text = row.Cells[1].Value.ToString();
+            this.nhanvien_txt_email.Text = row.Cells[2].Value.ToString();
+
+            this.nhanvien_txt_diachi.Text = row.Cells[3].Value.ToString();
+            this.nhanvien_txt_dienthoai.Text = row.Cells[4].Value.ToString();
+
+
+            this.nhanvien_txt_chucdanh.Text = row.Cells[6].Value.ToString();
+            if (row.Cells[5].Value.ToString() == "Nam") { this.nhanvien_rad_nam.Checked = true; this.nhanvien_rad_nu.Checked = false; } else { this.nhanvien_rad_nam.Checked = false; this.nhanvien_rad_nu.Checked = true; };
         }
         #endregion
 
