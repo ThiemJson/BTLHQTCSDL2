@@ -32,6 +32,8 @@
             this.tabHoaDon = new System.Windows.Forms.TabPage();
             this.hoadon_grid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.hoadon_txt_tongtien = new System.Windows.Forms.TextBox();
             this.hoadon_time_ngaydongtien = new System.Windows.Forms.DateTimePicker();
             this.hoadon_btn_xoa = new System.Windows.Forms.Button();
             this.hoadon_btn_them = new System.Windows.Forms.Button();
@@ -53,6 +55,8 @@
             this.tabHopDong = new System.Windows.Forms.TabPage();
             this.hopdong_grid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.hopdong_txt_tongtien = new System.Windows.Forms.TextBox();
             this.hopdong_time_ngaylaphopdong = new System.Windows.Forms.DateTimePicker();
             this.hopdong_time_ngayketthucthue = new System.Windows.Forms.DateTimePicker();
             this.hopdong_time_ngaybatdauthue = new System.Windows.Forms.DateTimePicker();
@@ -70,6 +74,10 @@
             this.tabKhuNha = new System.Windows.Forms.TabPage();
             this.khunha_grid = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.khunha_txt_sophong = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.khunha_txt_soluongsv = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -124,7 +132,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.nhanvien_rad_nam = new System.Windows.Forms.RadioButton();
             this.nhanvien_rad_nu = new System.Windows.Forms.RadioButton();
-            this.nhanvien_btn_xoa = new System.Windows.Forms.Button();
             this.nhanvien_btn_them = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.nhanvien_txt_chucdanh = new System.Windows.Forms.TextBox();
@@ -142,14 +149,7 @@
             this.tabNguoiDung = new System.Windows.Forms.TabPage();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.hoadon_txt_tongtien = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.hopdong_txt_tongtien = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.khunha_txt_soluongsv = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.khunha_txt_sophong = new System.Windows.Forms.TextBox();
+            this.nhanvien_btn_xoa = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hoadon_grid)).BeginInit();
@@ -185,6 +185,7 @@
             this.tabControl1.Controls.Add(this.tabNhanVienQuanLy);
             this.tabControl1.Controls.Add(this.tabNguoiDung);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Enabled = false;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -242,6 +243,24 @@
             this.panel1.Size = new System.Drawing.Size(806, 165);
             this.panel1.TabIndex = 0;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(573, 77);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 13);
+            this.label16.TabIndex = 61;
+            this.label16.Text = "Tổng tiền";
+            // 
+            // hoadon_txt_tongtien
+            // 
+            this.hoadon_txt_tongtien.Enabled = false;
+            this.hoadon_txt_tongtien.Location = new System.Drawing.Point(631, 74);
+            this.hoadon_txt_tongtien.Name = "hoadon_txt_tongtien";
+            this.hoadon_txt_tongtien.Size = new System.Drawing.Size(121, 20);
+            this.hoadon_txt_tongtien.TabIndex = 60;
+            this.hoadon_txt_tongtien.Text = "0 VNĐ";
+            // 
             // hoadon_time_ngaydongtien
             // 
             this.hoadon_time_ngaydongtien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -258,6 +277,7 @@
             this.hoadon_btn_xoa.TabIndex = 58;
             this.hoadon_btn_xoa.Text = "Xóa";
             this.hoadon_btn_xoa.UseVisualStyleBackColor = true;
+            this.hoadon_btn_xoa.Click += new System.EventHandler(this.hoadon_btn_xoa_Click);
             // 
             // hoadon_btn_them
             // 
@@ -437,6 +457,24 @@
             this.panel2.Size = new System.Drawing.Size(806, 142);
             this.panel2.TabIndex = 1;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(596, 58);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(52, 13);
+            this.label17.TabIndex = 63;
+            this.label17.Text = "Tổng tiền";
+            // 
+            // hopdong_txt_tongtien
+            // 
+            this.hopdong_txt_tongtien.Enabled = false;
+            this.hopdong_txt_tongtien.Location = new System.Drawing.Point(654, 55);
+            this.hopdong_txt_tongtien.Name = "hopdong_txt_tongtien";
+            this.hopdong_txt_tongtien.Size = new System.Drawing.Size(121, 20);
+            this.hopdong_txt_tongtien.TabIndex = 62;
+            this.hopdong_txt_tongtien.Text = "0 VNĐ";
+            // 
             // hopdong_time_ngaylaphopdong
             // 
             this.hopdong_time_ngaylaphopdong.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -479,6 +517,7 @@
             this.hopdong_btn_xoa.TabIndex = 43;
             this.hopdong_btn_xoa.Text = "Xóa";
             this.hopdong_btn_xoa.UseVisualStyleBackColor = true;
+            this.hopdong_btn_xoa.Click += new System.EventHandler(this.hopdong_btn_xoa_Click);
             // 
             // label15
             // 
@@ -597,6 +636,42 @@
             this.panel3.Size = new System.Drawing.Size(812, 109);
             this.panel3.TabIndex = 1;
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(267, 77);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(79, 13);
+            this.label42.TabIndex = 67;
+            this.label42.Text = "Tổng số phòng";
+            // 
+            // khunha_txt_sophong
+            // 
+            this.khunha_txt_sophong.Enabled = false;
+            this.khunha_txt_sophong.Location = new System.Drawing.Point(367, 77);
+            this.khunha_txt_sophong.Name = "khunha_txt_sophong";
+            this.khunha_txt_sophong.Size = new System.Drawing.Size(121, 20);
+            this.khunha_txt_sophong.TabIndex = 66;
+            this.khunha_txt_sophong.Text = "0 ";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(267, 51);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(94, 13);
+            this.label26.TabIndex = 65;
+            this.label26.Text = "Số lượng sinh viên";
+            // 
+            // khunha_txt_soluongsv
+            // 
+            this.khunha_txt_soluongsv.Enabled = false;
+            this.khunha_txt_soluongsv.Location = new System.Drawing.Point(367, 48);
+            this.khunha_txt_soluongsv.Name = "khunha_txt_soluongsv";
+            this.khunha_txt_soluongsv.Size = new System.Drawing.Size(121, 20);
+            this.khunha_txt_soluongsv.TabIndex = 64;
+            this.khunha_txt_soluongsv.Text = "0";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -653,6 +728,7 @@
             this.khunha_btn_xoa.TabIndex = 12;
             this.khunha_btn_xoa.Text = "Xóa";
             this.khunha_btn_xoa.UseVisualStyleBackColor = true;
+            this.khunha_btn_xoa.Click += new System.EventHandler(this.khunha_btn_xoa_Click);
             // 
             // khunha_btn_them
             // 
@@ -726,12 +802,14 @@
             // 
             // phong_btn_xoa
             // 
+            this.phong_btn_xoa.Enabled = false;
             this.phong_btn_xoa.Location = new System.Drawing.Point(664, 85);
             this.phong_btn_xoa.Name = "phong_btn_xoa";
             this.phong_btn_xoa.Size = new System.Drawing.Size(75, 23);
             this.phong_btn_xoa.TabIndex = 30;
             this.phong_btn_xoa.Text = "Xóa";
             this.phong_btn_xoa.UseVisualStyleBackColor = true;
+            this.phong_btn_xoa.Click += new System.EventHandler(this.phong_btn_xoa_Click);
             // 
             // phong_btn_them
             // 
@@ -984,6 +1062,7 @@
             this.sinhvien_btn_sua.TabIndex = 9;
             this.sinhvien_btn_sua.Text = "Xóa";
             this.sinhvien_btn_sua.UseVisualStyleBackColor = true;
+            this.sinhvien_btn_sua.Click += new System.EventHandler(this.sinhvien_btn_sua_Click);
             // 
             // sinhvien_btn_them
             // 
@@ -1121,15 +1200,6 @@
             this.nhanvien_rad_nu.TabIndex = 20;
             this.nhanvien_rad_nu.Text = "Nữ";
             this.nhanvien_rad_nu.UseVisualStyleBackColor = true;
-            // 
-            // nhanvien_btn_xoa
-            // 
-            this.nhanvien_btn_xoa.Location = new System.Drawing.Point(662, 83);
-            this.nhanvien_btn_xoa.Name = "nhanvien_btn_xoa";
-            this.nhanvien_btn_xoa.Size = new System.Drawing.Size(75, 23);
-            this.nhanvien_btn_xoa.TabIndex = 62;
-            this.nhanvien_btn_xoa.Text = "Xóa";
-            this.nhanvien_btn_xoa.UseVisualStyleBackColor = true;
             // 
             // nhanvien_btn_them
             // 
@@ -1274,77 +1344,16 @@
             this.panel7.Size = new System.Drawing.Size(812, 142);
             this.panel7.TabIndex = 1;
             // 
-            // label16
+            // nhanvien_btn_xoa
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(573, 77);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 13);
-            this.label16.TabIndex = 61;
-            this.label16.Text = "Tổng tiền";
-            // 
-            // hoadon_txt_tongtien
-            // 
-            this.hoadon_txt_tongtien.Enabled = false;
-            this.hoadon_txt_tongtien.Location = new System.Drawing.Point(631, 74);
-            this.hoadon_txt_tongtien.Name = "hoadon_txt_tongtien";
-            this.hoadon_txt_tongtien.Size = new System.Drawing.Size(121, 20);
-            this.hoadon_txt_tongtien.TabIndex = 60;
-            this.hoadon_txt_tongtien.Text = "0 VNĐ";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(596, 58);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 13);
-            this.label17.TabIndex = 63;
-            this.label17.Text = "Tổng tiền";
-            // 
-            // hopdong_txt_tongtien
-            // 
-            this.hopdong_txt_tongtien.Enabled = false;
-            this.hopdong_txt_tongtien.Location = new System.Drawing.Point(654, 55);
-            this.hopdong_txt_tongtien.Name = "hopdong_txt_tongtien";
-            this.hopdong_txt_tongtien.Size = new System.Drawing.Size(121, 20);
-            this.hopdong_txt_tongtien.TabIndex = 62;
-            this.hopdong_txt_tongtien.Text = "0 VNĐ";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(267, 51);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(94, 13);
-            this.label26.TabIndex = 65;
-            this.label26.Text = "Số lượng sinh viên";
-            // 
-            // khunha_txt_soluongsv
-            // 
-            this.khunha_txt_soluongsv.Enabled = false;
-            this.khunha_txt_soluongsv.Location = new System.Drawing.Point(367, 48);
-            this.khunha_txt_soluongsv.Name = "khunha_txt_soluongsv";
-            this.khunha_txt_soluongsv.Size = new System.Drawing.Size(121, 20);
-            this.khunha_txt_soluongsv.TabIndex = 64;
-            this.khunha_txt_soluongsv.Text = "0";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(267, 77);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(79, 13);
-            this.label42.TabIndex = 67;
-            this.label42.Text = "Tổng số phòng";
-            // 
-            // khunha_txt_sophong
-            // 
-            this.khunha_txt_sophong.Enabled = false;
-            this.khunha_txt_sophong.Location = new System.Drawing.Point(367, 77);
-            this.khunha_txt_sophong.Name = "khunha_txt_sophong";
-            this.khunha_txt_sophong.Size = new System.Drawing.Size(121, 20);
-            this.khunha_txt_sophong.TabIndex = 66;
-            this.khunha_txt_sophong.Text = "0 ";
+            this.nhanvien_btn_xoa.Enabled = false;
+            this.nhanvien_btn_xoa.Location = new System.Drawing.Point(662, 83);
+            this.nhanvien_btn_xoa.Name = "nhanvien_btn_xoa";
+            this.nhanvien_btn_xoa.Size = new System.Drawing.Size(75, 23);
+            this.nhanvien_btn_xoa.TabIndex = 62;
+            this.nhanvien_btn_xoa.Text = "Xóa";
+            this.nhanvien_btn_xoa.UseVisualStyleBackColor = true;
+            this.nhanvien_btn_xoa.Click += new System.EventHandler(this.nhanvien_btn_xoa_Click);
             // 
             // Form1
             // 
@@ -1481,7 +1490,6 @@
         private System.Windows.Forms.TextBox hoadon_txt_manhanvien;
         private System.Windows.Forms.TextBox hoadon_txt_maphong;
         private System.Windows.Forms.TextBox hoadon_txt_sohoadon;
-        private System.Windows.Forms.Button nhanvien_btn_xoa;
         private System.Windows.Forms.Button nhanvien_btn_them;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox nhanvien_txt_chucdanh;
@@ -1516,6 +1524,7 @@
         private System.Windows.Forms.TextBox khunha_txt_sophong;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox khunha_txt_soluongsv;
+        private System.Windows.Forms.Button nhanvien_btn_xoa;
     }
 }
 

@@ -530,5 +530,80 @@ namespace BTLHQTCSDL2
 
         }
         #endregion
+
+        private void hoadon_btn_xoa_Click(object sender, EventArgs e)
+        {
+            if (Hoadon_validate())
+            {
+                this.query = $"DELETE FROM HOADON WHERE soHD = N'{this.hoadon_txt_sohoadon.Text.ToString()}';";
+                this.cmd = new SqlCommand(this.query, Config.Conn);
+                try
+                {
+                    this.cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //TODO
+                };
+            }
+            this.clearData();
+            this.renderData();
+        }
+
+        private void hopdong_btn_xoa_Click(object sender, EventArgs e)
+        {
+            if (Hopdong_validate())
+            {
+                this.query = $"DELETE FROM HOPDONG WHERE maHD = N'{this.hopdong_txt_mahopdong.Text.ToString()}';";
+                this.cmd = new SqlCommand(this.query, Config.Conn);
+
+                try
+                {
+                    this.cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //TODO
+                }
+            }
+            this.clearData();
+            this.renderData();
+        }
+
+        private void khunha_btn_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phong_btn_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sinhvien_btn_sua_Click(object sender, EventArgs e)
+        {
+            if (this.Sinhvien_validate())
+            {
+                string masinhvien = this.sinhvien_txt_masinhvien.Text.ToString();
+                this.query = $"DELETE FROM SINHVIEN WHERE SINHVIEN.maSV = N'{masinhvien}';";
+
+                this.cmd = new SqlCommand(this.query, Config.Conn);
+                try
+                {
+                    this.cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //TODO
+                }
+            }
+            this.clearData();
+            this.renderData();
+        }
+
+        private void nhanvien_btn_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
